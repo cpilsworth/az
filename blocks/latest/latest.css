@@ -1,0 +1,19 @@
+.latest ul {
+    list-style-type: none;
+}
+
+.latest ul li {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ebefee;
+}
+
+.latest ul li a {
+    text-decoration: none;
+    color: #3c4242;
+    font-size: 16px;
+}
+
+.latest ul li a:hover {
+    text-decoration: underline;
+}
