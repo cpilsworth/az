@@ -9,6 +9,10 @@ footer {
     text-decoration: none;
   }
 
+  & ul {
+    list-style-type: none;
+  }
+
   & div div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
