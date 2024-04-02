@@ -22,42 +22,35 @@
   --accent-background-color: #3c1053;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
+  --body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 14px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 42px;
-  --heading-font-size-xl: 36px;
-  --heading-font-size-l: 24px;
-  --heading-font-size-m: 20px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-xxl: 32px;
+  --heading-font-size-xl: 24px;
+  --heading-font-size-l: 18.72px;
+  --heading-font-size-m: 16px;
+  --heading-font-size-s: 13.28px;
+  --heading-font-size-xs: 10.72px;
 
   /* nav height */
   --nav-height: 64px;
 }
 
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 100.06%;
-  ascent-override: 95%;
-  src: local('Arial');
-}
-
 @media (width >= 900px) {
   :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
+    --heading-font-size-xxl: 42px;
+    --heading-font-size-xl: 36px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
   }
 }
 
@@ -78,6 +71,8 @@ body.appear {
 header {
   height: var(--nav-height);
 }
+
+
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -209,4 +204,52 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+body.press-release main {
+  & .default-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & h1 {
+    text-align: center;
+  }
+
+  & p {
+    max-width: 65%;
+  }
+  & h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & h3 > strong {
+    display: block;
+    max-width: 65%;
+    text-align: center;
+  }
+
+  & h1 + p {
+    align-self: flex-start;
+  }
+
+  & p + strong {
+    align-self: flex-start;
+  }
+
+  & h3:before {
+    content: ' ';
+    display: table;
+    height: 1em;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%);
+  }
+}
+
+body.landing main .section.highlight {
+  background-color: #3c1053;
+  color: #fff;
 }
