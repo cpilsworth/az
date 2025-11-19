@@ -1,0 +1,13 @@
+{
+  "project": "AZ",
+  "editUrlLabel": "Edit",
+  "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}",
+  "plugins": [
+    {
+      "id": "review",
+      "title": "Review",
+      "environments": ["preview"],
+      "event": "review"
+    }
+  ]
+}
