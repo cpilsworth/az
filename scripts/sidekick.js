@@ -51,7 +51,6 @@ async function sendReview() {
 
 (async function sidekick() {
   const sk = document.querySelector('aem-sidekick');
-  if (!sk) return;
-  sk.addEventListener('custom:experimentation', toggleExp);
+  if (!sk) return;  
   sk.addEventListener('custom:review', sendReview);
 }());
