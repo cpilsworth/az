@@ -20,7 +20,7 @@ async function sendReview() {
   });
 
   try {
-    const response = await fetch('https://www.postb.in/b/1763560521955-8418951861094', {
+    const response = await fetch('https://hook.fusion.adobe.com/h6cfn1wcf8oopcz7b74kc7cohurqr925', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
